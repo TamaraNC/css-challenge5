@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --card-background:rgb(240, 243, 250);
+    --card-hover: hsl(232, 33%, 91%);
+    --green: hsl(163, 72%, 41%);
+    --red: hsl(356, 69%, 56%);
+    --text-gray: hsl(228, 12%, 44%)
+}
+body {
+    font-family: 'Inter', sans-serif;
+}
+header {
+    padding: 2rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(225, 100%, 98%);
+    height: 200px;
+}
+h1 {
+    font-size: 28px;
+    margin-bottom: 0.3rem;
+}
+h5, h2 {
+    color: var(--text-gray);
+}
+h2 {
+    padding: 0 10rem;
+}
+.mode,
+.click-container {
+    display: flex;
+    align-items: center;
+}
+.click-container {
+    justify-content: flex-end;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 1.3rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+    background-color: var(--text-gray);
+}
+.click-container:hover {
+    background-color: hsl(146, 68%, 55%);
+}
+.click {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.1rem;
+    border-radius: 50%;
+    background-color: white;
+}
+.big-cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2rem 10rem;
+}
+.big-card-header,
+.followers {
+    display: flex;
+}
+.big-card {
+    cursor: pointer;
+    z-index: 3;
+    background-color: var(--card-background);
+    padding: 2rem 4rem;
+    border-radius: 5px;
+    min-width: 240px;
+    margin: 1rem;
+}
+.big-card:hover {
+    background: var(--card-hover);
+}
+.fb-card {
+    border-top: 4px solid hsl(208, 92%, 53%);
+}
+.tw-card {
+    border-top: 4px solid hsl(203, 89%, 53%)
+}
+.ig-card {
+    border-top: 4px solid linear gradient (hsl(37, 97%, 70%) to hsl(329, 70%, 58%))
+}
+.yt-card {
+    border-top: 4px solid hsl(348, 97%, 39%)
+}
+.big-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.handle {
+    font-size: 12px;
+    margin-left: 0.5rem;
+    color: var(--text-gray);
+}
+.big-num {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+.follow {
+    letter-spacing: 0.2rem;
+    font-size: 14px;
+    color: var(--text-gray);
+}
+.followers {
+    color: var(--green);
+    font-size: 18px;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+.arrow {
+    margin-right: 0.2rem;
+}
+.down {
+    color: var(--red);
+}
+
+.small-cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2rem 10rem;
+}
+.small-card {
+    cursor: pointer;
+    min-width: 240px;
+    background: var(--card-background);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+}
+.small-card:hover {
+    background: var(--card-hover);
+}
+.small-card-header,
+.small-card-content {
+    display: flex;
+    justify-content: space-between;
+}
+.small-num {
+    font-size: 30px;
+    font-weight: 700;
+}
+.attribution {
+    text-align: center;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        padding: 2rem 5rem;
+    }
+    h2 {
+        padding: 0 5rem;
+    }
+    .big-cards-container,
+    .small-cards-container {
+        padding: 2rem 5rem;
+    }
+    .big-card,
+    .small-card {
+        min-width: 100%;
+    }
+    
+}
